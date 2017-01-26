@@ -3,21 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Hangman by Andres</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"> </script>
   </head>
   <body>
     <div id="container">
       <div id="hangman"></div>
-      <div id="game-answer">
-        <ul></ul>
-      </div>
-      <div id="user-answer">
-        <input type="text" maxlength="1">
-        <button id="user-submit">Submit</button>
+
+      <div id="user-panel">
+        <div id="user-answer">
+          <h2>Enter a letter below</h2>
+          <input type="text" maxlength="1">
+          <button id="user-submit">Submit</button>
+        </div>
+
+        <div id="game-answer">
+          <ul></ul>
+        </div>
+
       </div>
     </div>
+
+    <footer> A project by <a href="#" target="_blank">Andres Maza</a></footer>
 
   </body>
 </html>

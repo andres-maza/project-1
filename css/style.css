@@ -1,22 +1,24 @@
 body {
-  background-color: lightgray;
-}
-#container {
-  display: flex;
+  background-color: #3783F1;
 }
 
-#game-answer {
+h1,h2,h3,h4,h5,h6,p, a {
+  color: white;
+  font-family: "Open Sans", sans-serif;
 }
 
-#user-answer {
-  color: red;
+a {
+  text-decoration: none;
 }
 
-#hangman {
-  width: 120px;
-  height: 120px;
-  background-color: white;
-  border: #000 1px solid;
+h2 {
+  font-size: 28px;
+  letter-spacing: 0.35px;
+
+}
+
+p {
+  font-size: 18px;
 }
 
 ul {
@@ -26,16 +28,124 @@ ul {
 
 li {
   display: inline-block;
-  border-bottom: #000 1px solid;
-  margin-right: 5px;
+  border-bottom: #FFF 3px solid;
+  margin-right: 20px;
   min-width: 50px;
   text-align: center;
 }
 
 li p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: white;
   visibility: hidden;
   font-size: 32px;
   line-height: 0px;
-  margin-top: 0;
+  margin-top: 25px;
   margin-bottom: 20px;
 }
+
+input {
+  color: white;
+  height: 45px;
+  width: 75%;
+  border: #8ABBFF 2px solid;
+  border-radius: 3px;
+  margin-bottom: 35px;
+  padding-left: 15px;
+  font-size: 28px;
+  background-color: rgba(225,225,255,0.15);
+}
+
+input:focus {
+  border: #FFF 2px solid;
+  outline: none;
+}
+
+button {
+  font-size: 19px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 15px 28px;
+  border: none;
+  display: block;
+  transition: 0.25s;
+}
+
+button:after {
+
+}
+
+button:hover {
+  color: white;
+  padding: 15px 35px;
+  background-color: black;
+}
+
+footer {
+  color: rgba(255,255,255,.45);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  letter-spacing: 0.65px;
+}
+
+footer a {
+  opacity: 0.45;
+  transition: 0.25s;
+}
+
+footer a:hover{
+  opacity: 1;
+}
+
+#container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  max-width: 1280px;
+}
+
+#user-panel {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-left: 3rem;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#game-answer {
+  margin-top: 30px;
+  width: 95%;
+}
+
+#user-answer {
+}
+
+#hangman {
+  width: 40%;
+  height: 500px;
+  background-color: #8ABBFF;
+  margin-left: auto;
+}
+
+
+/* Media Queries */
+
+/*@media (max-width: 980px){
+  #container {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #hangman {
+    margin: 0 auto;
+    min-width: 320px;
+  }
+}*/
