@@ -27,11 +27,15 @@ ul {
 li {
   display: inline-block;
   border-bottom: #000 1px solid;
+  margin-right: 5px;
+  min-width: 50px;
+  text-align: center;
 }
 
 li p {
-  font-size: 72px;
+  visibility: hidden;
+  font-size: 32px;
   line-height: 0px;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
