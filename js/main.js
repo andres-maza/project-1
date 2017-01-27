@@ -22,7 +22,7 @@ $(document).ready(function() {
   // Game functionality
   var gameLogic = function() {
     // Get user input value and list items
-    var $userInputValue = $letterInput.val();
+    var $userInputValue = $letterInput.val().toLowerCase();
     var $listItems = $("#game-answer ul li p");
     // Check to see if the user's input is equal to an already guessed letter, if so alert "That letter has been selected"
     if(userInput.indexOf($userInputValue, 0) !== -1) {
