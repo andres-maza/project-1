@@ -129,7 +129,8 @@ footer a:hover{
 }
 
 #hangman {
-  width: 45%;
+  width: 40%;
+  max-width: 420px;
   height: 500px;
   /*background-color: #8ABBFF;*/
   margin-left: auto;
@@ -192,7 +193,7 @@ footer a:hover{
   #hangman {
     margin: 0 auto;
     width: 85%;
-    height: 250px;
+    height: 275px;
     background-position: center;
   }
 
