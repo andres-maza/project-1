@@ -83,13 +83,17 @@ button:hover {
 }
 
 footer {
-  color: rgba(255,255,255,.45);
   position: absolute;
   bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   text-align: center;
   width: 100%;
   font-weight: 400;
+}
+
+footer p {
+  font-size: 15px;
+  color: rgba(255,255,255,.45);
   letter-spacing: 0.65px;
 }
 
@@ -139,6 +143,36 @@ footer a:hover{
   background-size: contain;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+@keyframes animate-alert {
+  0% {transform: scale(0.85); opacity: 0.50;}
+  100% {transition: scale(1); opacity: 1;}
+}
+
+#alert-msg {
+  color: #000;
+  width: 450px;
+  height: 350px;
+  background-color: #FFF;
+  margin-top: 15%;
+  border-radius: 5px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 20;
+  animation-name: animate-alert;
+  animation-duration: 0.45s;
+}
+
 
 /* Media Queries */
 
@@ -161,7 +195,10 @@ footer a:hover{
   input {
     min-width: 0;
     width: 100%;
-    box-shadow: none !important;
+  }
+
+  input[type=text] {
+    -webkit-appreance: none;
   }
 
   button {

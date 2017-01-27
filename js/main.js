@@ -9,7 +9,7 @@ $(document).ready(function() {
   var lifeCount = 6;
   // Get random word from wordList and split into new array of answerByLetter
   var correctAnswer = wordList[Math.floor(Math.random() * wordList.length)];
-  var answerByLetter = correctAnswer.split("");
+  answerByLetter = correctAnswer.split("");
 
   // Create new li element per value in answerByLetter and set its text equal to each index
   var startGame = function() {
@@ -50,15 +50,15 @@ $(document).ready(function() {
     // Else if lifeCount is equal to 0, user has lost the game
     // In either scenario, reload the window to start a new game
     if(userInput.length === answerByLetter.length) {
-      setTimeout(function() {
-        alert("You've won!");
-        window.location.reload(true);
-      }, 150);
+      setTimeout(function() {alert("You've won!");});
+      lifeCount = 6;
+      userInput.length = 0;
+      setTimeout(function(){gameRestart();},300);
       } else if (lifeCount === 0) {
-      setTimeout(function(){
-        alert("Aww man, you've lost!");
-        window.location.reload(true);
-      }, 150);
+      setTimeout(function(){alert("Aww man, you've lost!");}, 150);
+      lifeCount = 6;
+      userInput.length = 0;
+      setTimeout(function(){gameRestart();},300);
       }
     $letterInput.val("");
   }
@@ -84,6 +84,23 @@ $(document).ready(function() {
       case 0:
         $("#hangman").css("background-image","url(assets/state-0.png)");
     }
+  }
+
+  // Logic to restart the game after win/lose
+  var gameRestart = function(){
+    $("li").detach();
+    delete answerByLetter;
+    (function(){
+      var correctAnswer = wordList[Math.floor(Math.random() * wordList.length)];
+      answerByLetter = correctAnswer.split("");
+
+      for(var i = 0; i < answerByLetter.length; i++) {
+        var $newListItem = $("<li>");
+        $("#game-answer ul").append($newListItem.html($("<p>").text(answerByLetter[i])));
+      }
+    })();
+    $letterInput.val("");
+    $("#hangman").css("background-image","url(assets/default.png)");
   }
 
   // On click and keydown event listeners
