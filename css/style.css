@@ -30,7 +30,7 @@ li {
   display: inline-block;
   border-bottom: #FFF 3px solid;
   margin-right: 20px;
-  min-width: 50px;
+  width: 15%;
   text-align: center;
 }
 
@@ -48,10 +48,10 @@ li p {
 input {
   color: white;
   height: 45px;
-  width: 75%;
+  min-width: 175px;
   border: #8ABBFF 2px solid;
   border-radius: 3px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   padding-left: 15px;
   font-size: 28px;
   background-color: rgba(225,225,255,0.15);
@@ -106,7 +106,7 @@ footer a:hover{
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 5%;
   max-width: 1280px;
 }
 
@@ -121,7 +121,7 @@ footer a:hover{
 }
 
 #game-answer {
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   width: 95%;
 }
 
@@ -129,23 +129,87 @@ footer a:hover{
 }
 
 #hangman {
-  width: 40%;
+  width: 45%;
   height: 500px;
   background-color: #8ABBFF;
   margin-left: auto;
+  background-image: url(../assets/test-bg-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
 }
 
 
 /* Media Queries */
 
-/*@media (max-width: 980px){
+@media (max-width: 950px){
+  #user-panel {
+    margin-top: 25px;
+    margin-left: 2rem;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 650px){
+  h2 {
+    font-size: 20px;
+  }
+
+  input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+
+  li {
+    border-bottom: #FFF 2px solid;
+    width: 10%;
+  }
+
+  li p {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  footer {
+    text-align: left;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
   #container {
-    display: block;
-    margin: 0 auto;
+    flex-direction: column;
+    margin-top: 1.75rem;
   }
 
   #hangman {
     margin: 0 auto;
-    min-width: 320px;
+    width: 85%;
+    height: 250px;
+    background-position: center;
   }
-}*/
+
+  #user-panel {
+    flex-direction: column-reverse;
+    max-width: 95%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 10px;
+  }
+
+  #game-answer ul {
+    margin: 0 auto;
+  }
+
+  #user-answer {
+    margin-top: 35px;
+  }
+}
