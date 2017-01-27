@@ -183,6 +183,9 @@ footer a:hover{
     text-align: left;
     margin-left: 8%;
     margin-right: 8%;
+    max-width: 85%;
+    position: inherit;
+    margin-top: 25px;
   }
 
   #container {
