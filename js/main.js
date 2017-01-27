@@ -67,22 +67,22 @@ $(document).ready(function() {
   var checkHangManState = function () {
     switch(lifeCount) {
       case 5:
-        $("#hangman").css("background-color","red");
+        $("#hangman").css("background-image","url(assets/state-5.png)");
         break;
       case 4:
-        $("#hangman").css("background-color","blue");
+        $("#hangman").css("background-image","url(assets/state-4.png)");
         break;
       case 3:
-        $("#hangman").css("background-color","yellow");
+        $("#hangman").css("background-image","url(assets/state-3.png)");
         break;
       case 2:
-        $("#hangman").css("background-color","black");
+        $("#hangman").css("background-image","url(assets/state-2.png)");
         break;
       case 1:
-        $("#hangman").css("background-color","green");
+        $("#hangman").css("background-image","url(assets/state-1.png)");
         break;
       case 0:
-        $("#hangman").css("background-color","gray");
+        $("#hangman").css("background-image","url(assets/state-0.png)");
     }
   }
 
