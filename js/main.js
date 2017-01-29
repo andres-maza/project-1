@@ -110,7 +110,7 @@ $(document).ready(function() {
     var $instrBox = $("<div>", {id: "instructions"});
     var $closeBox = $("<button>", {id: "close-btn"}).text("x");
     var $instrTxt = $("<p>", {id: "instr-txt"}).text(
-                                                `Select a letter of the alphabet
+                                                `Select a letter of the alphabet.
                                                 If the letter is contained in the word,
                                                 take another turn guessing a letter.
                                                 If the letter is not a part of the word,
@@ -142,3 +142,8 @@ $(document).ready(function() {
   startGame();
 
 });
+
+
+// For line 45, I looked at line 55 here: https://github.com/StretchProjects/hangman/blob/gh-pages/js/hangman.js
+// I saw this referenced across some other Hangman examples but did not fully understand exactly what indexOf was
+// Therefore I looked at http://www.w3schools.com/jsref/jsref_indexof.asp to get a better understanding of this particular method.
